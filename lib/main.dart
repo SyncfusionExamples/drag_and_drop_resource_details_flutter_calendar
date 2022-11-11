@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 void main() => runApp(const MaterialApp(home: DroppedResourceDetails()));
@@ -13,7 +12,7 @@ class DroppedResourceDetails extends StatefulWidget {
 }
 
 class DroppedResourceDetailsState extends State<DroppedResourceDetails> {
-  final List<CalendarView>? _allowedViews = <CalendarView>[
+  final List<CalendarView> _allowedViews = <CalendarView>[
     CalendarView.timelineDay,
     CalendarView.timelineWeek,
     CalendarView.timelineWorkWeek,
@@ -79,7 +78,7 @@ class DroppedResourceDetailsState extends State<DroppedResourceDetails> {
     for (int i = 0; i < _nameCollection.length; i++) {
       _employeeCollection.add(CalendarResource(
         displayName: _nameCollection[i],
-        id: '000' + i.toString(),
+        id: '000$i',
         color: Color.fromRGBO(
             random.nextInt(255), random.nextInt(255), random.nextInt(255), 1),
       ));
@@ -130,9 +129,9 @@ class DroppedResourceDetailsState extends State<DroppedResourceDetails> {
           final DateTime date = DateTime.now().add(Duration(days: k + j));
           int startHour = 9 + random.nextInt(6);
           startHour =
-              startHour >= 13 && startHour <= 14 ? startHour + 1 : startHour;
+          startHour >= 13 && startHour <= 14 ? startHour + 1 : startHour;
           final DateTime _shiftStartTime =
-              DateTime(date.year, date.month, date.day, startHour, 0, 0);
+          DateTime(date.year, date.month, date.day, startHour, 0, 0);
           _shiftCollection!.add(Appointment(
               startTime: _shiftStartTime,
               endTime: _shiftStartTime.add(const Duration(hours: 1)),
