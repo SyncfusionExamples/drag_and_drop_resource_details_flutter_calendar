@@ -13,6 +13,8 @@ To perform drag-and-drop operations within the calendar, enable the [allowDragAn
 
 The [sourceResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/sourceResource.html) and [targetResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails/targetResource.html) properties from the [AppointmentDragEndDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AppointmentDragEndDetails-class.html) can be used to get the changed target and source resource details through the onDragEnd callback.
 
+![ResourceDetails](https://user-images.githubusercontent.com/46158936/204247102-02d887e8-9642-47c8-856f-6f49d48260dd.gif)
+
 You can also refer our UG documentation to know more about [DragandDrop](https://help.syncfusion.com/flutter/calendar/drag-drop) support in the Flutter calendar.
 
 ## Requirements to run the demo
